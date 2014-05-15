@@ -3174,11 +3174,7 @@ SISPreInit(ScrnInfoPtr pScrn, int flags)
     pSiS->pInt = NULL;
 
     /* Save PCI Domain Base */
-#if XF86_VERSION_CURRENT < XF86_VERSION_NUMERIC(4,2,99,0,0)
     pSiS->IODBase = 0;
-#else
-    pSiS->IODBase = pScrn->domainIOBase;
-#endif
 
     /* Get the entity, and make sure it is PCI. */
     pSiS->pEnt = xf86GetEntityInfo(pScrn->entityList[0]);
