@@ -47,9 +47,6 @@
 #define SISMERGED		/* Include Merged-FB support */
 
 #undef SISXINERAMA
-#ifdef SISMERGED
-#define SISXINERAMA		/* Include SiS Pseudo-Xinerama support for MergedFB mode */
-#endif
 
 #if 1
 #define SIS_ARGB_CURSOR		/* Include support for color hardware cursors */
