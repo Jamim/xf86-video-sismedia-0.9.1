@@ -67,6 +67,13 @@
 #if GET_ABI_MAJOR(ABI_VIDEODRV_VERSION) < 6
 #include "xf86Resources.h"
 #endif
+#if GET_ABI_MAJOR(ABI_VIDEODRV_VERSION) < 12
+#define _swapl(x, n) swapl(x,n)
+#define _swaps(x, n) swaps(x,n)
+#else
+#define _swapl(x, n) swapl(x)
+#define _swaps(x, n) swaps(x)
+#endif
 #include "xf86.h"
 #include "xf86PciInfo.h"
 #include "xf86Cursor.h"
